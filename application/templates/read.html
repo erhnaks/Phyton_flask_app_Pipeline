@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Fantasy Pizza{% endblock %}
+
+{% block content %}
+<h1>test</h1>
+<br>
+<h3>All Pizza chef:</h3>
+    <p>
+    {% for chef in chef %}
+        name: {{ chef.name }} <br>
+        <br>
+        <span><a href="{{ url_for('update', name=chef.name) }}">Update</a></span>
+        <span><a href="{{ url_for('delete', name=chef.name) }}">Delete</a></span> 
+        <br>
+        <br>
+    {% endfor %}
+    </p>
+
+{% endblock %}

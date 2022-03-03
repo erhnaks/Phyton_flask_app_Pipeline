@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Create a Pizza Master{% endblock %}
+
+{% block content %}
+<form action="" method="post">
+    {{ form.hidden_tag() }}
+    {{ form.name.label }} {{ form.name }}
+    {% if form.name.errors %}
+    <div class='error'>
+        {% for error in form.name.errors %}
+        <span>{{ error }}</span>
+        {% endfor %}
+    </div>
+    {% endif %}
+    <br>
+    {{ form.submit }}
+</form>
+
+{% endblock %}

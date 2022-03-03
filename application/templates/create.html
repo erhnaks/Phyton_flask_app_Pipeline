@@ -1,0 +1,36 @@
+<form action="" method="post">
+    
+
+
+    {{ form.hidden_tag() }}
+    {{ form.chef.label}} {{ form.chef }}
+    <br>
+    {{ form.name.label }} 
+    {{ form.name }}
+    {% if form.name.errors %}
+    <div class='error'>
+        {% for error in form.name.errors %}
+        <span>{{ error }}</span>
+        {% endfor %}
+    </div>
+    {% endif %}
+    <br>
+    {{ form.crust.label }} {{ form.crust }}
+    <br>
+    {{ form.base.label }} {{ form.base }}
+    <br>
+    {{ form.topping1.label }} {{ form.topping1 }}
+    <br>
+    {{ form.topping2.label }} {{ form.topping2 }}
+    <br>
+    {{ form.topping3.label }} {{ form.topping3 }}
+    <br>
+    {{ form.topping4.label }} {{ form.topping4 }}
+    <br>
+    {{ form.topping5.label }} {{ form.topping5 }}
+    <br>
+    </div>
+    <br>
+    {{ form.submit }}
+    </form>
+</div>
