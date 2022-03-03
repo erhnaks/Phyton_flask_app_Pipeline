@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
-{% block title %}Create a Pizza Master{% endblock %}
+{% block chef %}
 
-{% block content %}
+
 <form action="" method="post">
     {{ form.hidden_tag() }}
     {{ form.name.label }} {{ form.name }}
@@ -16,4 +16,4 @@
     {{ form.submit }}
 </form>
 
-{% endblock %}
+{% endblock chef %}

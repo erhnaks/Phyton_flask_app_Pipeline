@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
-{% block title %}Fantasy Pizza{% endblock %}
+{% block chef %}
 
-{% block content %}
 <h1>test</h1>
 <br>
 <h3>All Pizza chef:</h3>
@@ -9,20 +8,33 @@
     {% for chef in chef %}
         name: {{ chef.name }} <br>
         <br>
-        <span><a href="{{ url_for('update', name=chef.name) }}">Update</a></span>
-        <span><a href="{{ url_for('delete', name=chef.name) }}">Delete</a></span> 
+        <span><a href="{{ url_for('updatechef', name=chef.name) }}">Update</a></span>
+        <span><a href="{{ url_for('deletechef', name=chef.name) }}">Delete</a></span> 
         <br>
         <br>
     {% endfor %}
-    {% for pizza in pizzas %}
-        chef: {{ pizza.chef.name }}
-        name: {{ pizza.name }}
-        crust: {{ pizza.crust }}
+    {% for pizza in pizza %}
+    <br>
+        Chef: {{ pizza.chef.name }}
+        <br>
+        Pizza name: {{ pizza.name }}
+        <br>
+        Crust: {{ pizza.crust }}
+        <br>
         base: {{ pizza.base }}
+        <br>
         topping1: {{ pizza.topping1 }}
+        <br>
         topping2: {{ pizza.topping2 }}
+        <br>
         topping3: {{ pizza.topping3 }}
+        <br>
         topping4: {{ pizza.topping4 }}
+        <br>
         topping5: {{ pizza.topping5 }}
+        <br>
+        <button><span><a href="{{ url_for('deletepizza', name=pizza.name) }}">Delete Pizza</a></span></button>
+        <br>
         {% endfor %}  
-    {% endblock %}
+        </p>
+    {% endblock chef %}

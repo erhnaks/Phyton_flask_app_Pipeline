@@ -23,7 +23,7 @@ class Updateform(FlaskForm):
             raise ValidationError ('Ooopps, This fantasy Chef name does exist, Please choose another fancy Chef name')
 
 class Pizzaform(FlaskForm):
-    chef = SelectField('Add to Chef', choices=[])
+    #chef = SelectField('Add to Chef', choices=[])
     name = StringField('name:', validators=[DataRequired(), Length(min=2, max=30)])
     crust = SelectField('crust', choices=[('Thin', 'Thin'), ('Deep', 'Deep'), ('Stuffed', 'Stuffed')])
     base = SelectField('Base Sauce', choices=[('Tomato', 'Tomato'), ('Garlic', 'Garlic'), ('Tomato&Garlic', 'Tomato&Garlic')])

@@ -17,12 +17,12 @@ def createchef():
 @app.route('/', methods=['GET'])
 @app.route('/read', methods=['GET'])
 def read():
-   chef = Chef.query.all()
-   pizza = Pizza.query.all()
-   return render_template('read.html', chef=chef, pizza=pizza)
+    chef = Chef.query.all()
+    pizza = Pizza.query.all()
+    return render_template('read.html', chef=chef, pizza=pizza)
 
 @app.route('/update/<name>', methods=['POST', 'GET'])
-def update(name):
+def updatechef(name):
     updateform = Updateform()
     chef = Chef.query.filter_by(name=name).first()
     
@@ -35,10 +35,17 @@ def update(name):
             db.session.commit()
             return redirect(url_for('read'))
 
-@app.route('/delete/<name>', methods=['POST', 'GET'])
-def delete(name):
+@app.route('/deletechef/<name>', methods=['POST', 'GET'])
+def deletechef(name):
         chef = Chef.query.filter_by(name=name).first()
         db.session.delete(chef)
+        db.session.commit()
+        return redirect(url_for('read'))
+
+@app.route('/deletepizza/<name>', methods=['POST', 'GET'])
+def deletepizza(name):
+        pizza = Pizza.query.filter_by(name=name).first()
+        db.session.delete(pizza)
         db.session.commit()
         return redirect(url_for('read'))
 
@@ -48,7 +55,7 @@ def createpizza():
     pizzaform = Pizzaform()
     chef = Chef.query.all()
     for chef in chef:
-        pizzaform.chef.choices.append((chef.id, chef.name))
+        pizzaform.chef_id.choices.append((chef.id, chef.name))
 
     if pizzaform.validate_on_submit():
         pizza = Pizza(
@@ -60,7 +67,7 @@ def createpizza():
         topping3=pizzaform.topping3.data,
         topping4=pizzaform.topping4.data,
         topping5=pizzaform.topping5.data,
-        chef_id= pizzaform.chef_pizza.data)
+        chef_id= pizzaform.chef_id.data)
         db.session.add(pizza)
         db.session.commit()
         return redirect(url_for('read'))
