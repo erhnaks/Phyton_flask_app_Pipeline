@@ -14,6 +14,15 @@
         <br>
         <br>
     {% endfor %}
-    </p>
-
-{% endblock %}
+    {% for pizza in pizzas %}
+        chef: {{ pizza.chef.name }}
+        name: {{ pizza.name }}
+        crust: {{ pizza.crust }}
+        base: {{ pizza.base }}
+        topping1: {{ pizza.topping1 }}
+        topping2: {{ pizza.topping2 }}
+        topping3: {{ pizza.topping3 }}
+        topping4: {{ pizza.topping4 }}
+        topping5: {{ pizza.topping5 }}
+        {% endfor %}  
+    {% endblock %}

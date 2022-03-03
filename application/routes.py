@@ -18,7 +18,8 @@ def createchef():
 @app.route('/read', methods=['GET'])
 def read():
    chef = Chef.query.all()
-   return render_template('read.html', chef=chef)
+   pizza = Pizza.query.all()
+   return render_template('read.html', chef=chef, pizza=pizza)
 
 @app.route('/update/<name>', methods=['POST', 'GET'])
 def update(name):
@@ -42,7 +43,7 @@ def delete(name):
         return redirect(url_for('read'))
 
 
-@app.route('/create', methods = ['POST','GET'])
+@app.route('/createpizza', methods = ['POST','GET'])
 def createpizza():
     pizzaform = Pizzaform()
     chef = Chef.query.all()
@@ -58,9 +59,9 @@ def createpizza():
         topping2=pizzaform.topping2.data,
         topping3=pizzaform.topping3.data,
         topping4=pizzaform.topping4.data,
-        topping5=pizzaform.topping5.data
-        )
+        topping5=pizzaform.topping5.data,
+        chef_id= pizzaform.chef_pizza.data)
         db.session.add(pizza)
         db.session.commit()
         return redirect(url_for('read'))
-    return render_template('create.html', form=pizzaform)
+    return render_template('createpizza.html', form=pizzaform)

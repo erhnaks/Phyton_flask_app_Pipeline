@@ -32,6 +32,7 @@ class Pizzaform(FlaskForm):
     topping3 = SelectField('Topping', choices=[('Olives', 'Olives'), ('Onion', 'Onion'), ('Muhsroom', 'Muhsroom')])
     topping4 = SelectField('Topping', choices=[('Sweetcorn', 'Sweetcorn'), ('Pineapple', 'Pineapple'), ('Sundried Tomato', 'Sundried Tomato')])
     topping5 = SelectField('Exotic topping', choices=[('Garlic', 'Garlic'), ('Capsicum', 'Capsicum'), ('Eggplant', 'Eggplant')])
+    chef_id = SelectField('Pick a chef', choices=[], validators=[DataRequired()])
     submit = SubmitField('Submit')
     def validate_name(self, name):
         name_pizza = Pizza.query.filter_by(name=name.data).first()
