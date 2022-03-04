@@ -45,3 +45,19 @@ class Testresponse(TestBase):
         self.assertIn(b'Onion',response.data)
         self.assertIn(b'Pineapple',response.data)
         self.assertIn(b'Capsicum',response.data)
+
+class TestCRUD(TestBase):
+
+    def test_read_chef(self):
+        response = self.client.get(url_for('read'))
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b'erhan', response.data)
+    
+    def test_create_chef(self):
+        response = self.client.post(url_for('createchef'), data=dict(name="erhan"))
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b'erhan', response.data)
+
+#     def test_update_chef(self):
+
+#     def test_delete_chef(self):
