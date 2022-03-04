@@ -5,8 +5,8 @@ from wtforms.validators import DataRequired, Length, ValidationError
 from application.models import Chef, Pizza
 
 class Createform(FlaskForm):
-    name = StringField('Master Name:', validators=[DataRequired(), Length(min=2, max=50)])
-    submit = SubmitField('Create Chef')
+    name = StringField('Name:', validators=[DataRequired(), Length(min=2, max=50)])
+    submit = SubmitField('Submit')
 
     def validate_name(self, name):
         name = Chef.query.filter_by(name=name.data).first()
@@ -23,7 +23,6 @@ class Updateform(FlaskForm):
             raise ValidationError ('Ooopps, This fantasy Chef name does exist, Please choose another fancy Chef name')
 
 class Pizzaform(FlaskForm):
-    #chef = SelectField('Add to Chef', choices=[])
     name = StringField('name:', validators=[DataRequired(), Length(min=2, max=30)])
     crust = SelectField('crust', choices=[('Thin', 'Thin'), ('Deep', 'Deep'), ('Stuffed', 'Stuffed')])
     base = SelectField('Base Sauce', choices=[('Tomato', 'Tomato'), ('Garlic', 'Garlic'), ('Tomato&Garlic', 'Tomato&Garlic')])
