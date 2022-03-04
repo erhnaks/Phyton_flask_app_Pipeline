@@ -46,7 +46,9 @@ class Testresponse(TestBase):
         self.assertIn(b'Pineapple',response.data)
         self.assertIn(b'Capsicum',response.data)
 
-class TestCRUD(TestBase):
+# Testing the CRUD Functionality on Chef Model
+
+class TestCRUDChef(TestBase):
 
     def test_read_chef(self):
         response = self.client.get(url_for('read'))
@@ -60,6 +62,12 @@ class TestCRUD(TestBase):
         self.assertEqual(response.status_code, 200)
         self.assertIn(b'erhan', response.data)
 
+    # Testing Update Function with GET request.
+
+    def test_update_chef(self):
+        response = self.client.get(url_for("updatechef", name="erhan"))
+        self.assertEqual(response.status_code, 200)
+    
     def test_update_chef(self):
         response = self.client.post(url_for("updatechef", name="erhan"),
         data=dict(name="updated"),
@@ -74,3 +82,35 @@ class TestCRUD(TestBase):
     )
         self.assertEqual(response.status_code, 200)
         self.assertNotIn(b'updated', response.data)
+
+# Testing the CRUD fucntionality on Pizza Model
+
+class TestCRUDPizza(TestBase):
+
+    def test_read_pizza(self):
+        response = self.client.get(url_for('read'))
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b'erhan',response.data)
+        self.assertIn(b'pizza',response.data)
+        self.assertIn(b'Deep',response.data)
+        self.assertIn(b'Capsicum',response.data)
+        self.assertIn(b'Beef',response.data)
+        self.assertIn(b'Pepper mild',response.data)
+        self.assertIn(b'Onion',response.data)
+        self.assertIn(b'Pineapple',response.data)
+        self.assertIn(b'Capsicum',response.data)
+    
+    def test_create_pizza(self):
+        response = self.client.post(url_for('createpizza'))
+        self.assertEqual(response.status_code, 200)
+        response = self.client.get(url_for('read'))
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b'erhan',response.data)
+        self.assertIn(b'pizza',response.data)
+        self.assertIn(b'Deep',response.data)
+        self.assertIn(b'Capsicum',response.data)
+        self.assertIn(b'Beef',response.data)
+        self.assertIn(b'Pepper mild',response.data)
+        self.assertIn(b'Onion',response.data)
+        self.assertIn(b'Pineapple',response.data)
+        self.assertIn(b'Capsicum',response.data)
