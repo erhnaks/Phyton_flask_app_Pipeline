@@ -4,28 +4,26 @@ from application.models import Chef, Pizza
 from flask import url_for
 
 class TestBase(TestCase):
-
     def create_app(self):
         
         app.config.update(
-                DATABASE_URI="sqlite:///",
+                SQLALCHEMY_DATABASE_URI="sqlite:///",
                 SECRET_KEY='TEST_SECRET_KEY',
                 DEBUG=True,
                 WTF_CSRF_ENABLED=False
-        )
+                )
         return app
 
 
-    def setup(self):
+    def setUp(self):
         db.create_all()
 
         chef1 = Chef(name="erhan")
-        
         db.session.add(chef1)
         db.session.commit()
 
         pizza1 = Pizza(
-        name="Pizza", crust= "Deep", base= "Capsicum", topping1="Beef",
+        name="pizza", crust= "Deep", base= "Capsicum", topping1="Beef",
         topping2="Pepper mild", topping3="Onion", topping4="Pineapple", topping5="Capsicum")
         db.session.add(pizza1)
         db.session.commit()
