@@ -76,6 +76,7 @@ class TestCRUDChef(TestBase):
         self.assertEqual(response.status_code, 200)
         self.assertIn(b'updated', response.data)
 
+
     def test_delete_chef(self):
         response = self.client.post(url_for("deletechef", name="erhan"),
         follow_redirects=True
