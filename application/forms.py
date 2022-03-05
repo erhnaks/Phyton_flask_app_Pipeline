@@ -10,7 +10,7 @@ class Createform(FlaskForm):
     def validate_name(self, name):
         name = Chef.query.filter_by(name=name.data).first()
         if name:
-            raise ValidationError ('Ooopps, This fantasy chef does exist, Please choose another fancy Chef name')
+            raise ValidationError ('This name is taken')
 
 class Updateform(FlaskForm):
     name = StringField('Chef Name:', validators=[DataRequired(), Length(min=2, max=50)])
@@ -19,7 +19,7 @@ class Updateform(FlaskForm):
     def validate_name(self, name):
         name_update_chef = Chef.query.filter_by(name=name.data).first()
         if name_update_chef:
-            raise ValidationError ('Ooopps, This fantasy Chef name does exist, Please choose another fancy Chef name')
+            raise ValidationError ('Username exist')
 
 class Pizzaform(FlaskForm):
     
@@ -51,4 +51,4 @@ class Pizzaform(FlaskForm):
     def validate_name(self, name):
         name_pizza = Pizza.query.filter_by(name=name.data).first()
         if name_pizza:
-            raise ValidationError ('Ooopps, This fantasy Chef name does exist, Please choose another fancy Chef name')
+            raise ValidationError ('This name is taken')

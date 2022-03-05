@@ -1,7 +1,9 @@
+from wsgiref.validate import validator
+from xml.dom import ValidationErr
 from flask_testing import TestCase
 from application import app, db
 from application.models import Chef, Pizza
-from flask import url_for
+from flask import message_flashed, url_for
 
 class TestBase(TestCase):
     def create_app(self):
@@ -13,7 +15,6 @@ class TestBase(TestCase):
                 WTF_CSRF_ENABLED=False
                 )
         return app
-
 
     def setUp(self):
         db.create_all()
@@ -120,3 +121,12 @@ class TestCRUDPizza(TestBase):
         response = self.client.post(url_for('deletepizza', name="pizza"), follow_redirects=True)
         response = self.client.get(url_for('read'))
         self.assertEqual(response.status_code, 200)
+
+
+
+    def test_create_chef(self):
+        response = self.client.post(url_for('createchef'),
+        data=dict(name=""),
+        follow_redirects=False)
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b'', response.data)
