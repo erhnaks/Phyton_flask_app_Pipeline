@@ -6,7 +6,7 @@
 <center><h4>Pizza chef's:</h4></center>
     <p>
     {% for chef in chef %}
-    <center>Master Name: {{ chef.name }} <br></center>
+    <center>Chef Name: {{ chef.name }} <br></center>
         <br>
         <center><span><a href="{{ url_for('updatechef', name=chef.name) }}">Update</a></span>
         <span><a href="{{ url_for('deletechef', name=chef.name) }}">Delete</a></span></center>
@@ -22,7 +22,7 @@
         <br>
         <center> Crust: {{ pizza.crust }} </center>
         <br>
-        <center>base: {{ pizza.base }}
+        <center> base: {{ pizza.base }}</center>
         <br>
         <center> topping1: {{ pizza.topping1 }} </center>
         <br>
@@ -34,7 +34,7 @@
         <br>
         <center> topping5: {{ pizza.topping5 }} </center>
         <br>
-        <center><button><span><a href="{{ url_for('deletepizza', name=pizza.name) }}">Delete Pizza</a></span></button>
+        <center><span><a href="{{ url_for('deletepizza', name=pizza.name) }}">Delete</a></span></button></center>
         <br>
         {% endfor %}  
         </p>

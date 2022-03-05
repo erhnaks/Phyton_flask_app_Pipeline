@@ -13,7 +13,7 @@ class Createform(FlaskForm):
             raise ValidationError ('Ooopps, This fantasy chef does exist, Please choose another fancy Chef name')
 
 class Updateform(FlaskForm):
-    name = StringField('chef Name:', validators=[DataRequired(), Length(min=2, max=50)])
+    name = StringField('Chef Name:', validators=[DataRequired(), Length(min=2, max=50)])
     submit = SubmitField('Save')
 
     def validate_name(self, name):
