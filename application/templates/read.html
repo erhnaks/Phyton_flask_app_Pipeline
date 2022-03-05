@@ -3,11 +3,10 @@
 
 <h1></h1>
 <br>
-<center><h4>Pizza chef's:</h4></center>
+<center><h4>Pizza Chef's:</h4></center>
     <p>
     {% for chef in chef %}
     <center>Chef Name: {{ chef.name }} <br></center>
-        <br>
         <center><span><a href="{{ url_for('updatechef', name=chef.name) }}">Update</a></span>
         <span><a href="{{ url_for('deletechef', name=chef.name) }}">Delete</a></span></center>
         <br>
@@ -17,23 +16,15 @@
     {% for pizza in pizza %}
     <br>
         <center>Chef: {{ pizza.chef.name }} </center> 
-        <br>
         <center> Pizza name: {{ pizza.name }} </center>
         <br>
         <center> Crust: {{ pizza.crust }} </center>
-        <br>
-        <center> base: {{ pizza.base }}</center>
-        <br>
-        <center> topping1: {{ pizza.topping1 }} </center>
-        <br>
-        <center> topping2: {{ pizza.topping2 }} </center>
-        <br>
-        <center> topping3: {{ pizza.topping3 }} </center>
-        <br>
-        <center> topping4: {{ pizza.topping4 }} </center>
-        <br>
-        <center> topping5: {{ pizza.topping5 }} </center>
-        <br>
+        <center> Base: {{ pizza.base }}</center>
+        <center> Topping1: {{ pizza.topping1 }} </center>
+        <center> Topping2: {{ pizza.topping2 }} </center>
+        <center> Topping3: {{ pizza.topping3 }} </center>
+        <center> Topping4: {{ pizza.topping4 }} </center>
+        <center> Topping5: {{ pizza.topping5 }} </center>
         <center><span><a href="{{ url_for('deletepizza', name=pizza.name) }}">Delete</a></span></button></center>
         <br>
         {% endfor %}  
