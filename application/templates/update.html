@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block chef %}
-<h3>Update The Master:</h3>
+<center><h4>Update Your Name:</h4></center>
 <div class='form'>
     <form method='POST' action=''>
         {{ form.hidden_tag() }}
-        {{ form.name.label }}
-        {{ form.name }}
+        <center>{{ form.name.label }}</center>
+        <center>{{ form.name }}</center>
         {% if form.name.errors %}
         <div class='error'>
             {% for error in form.name.errors %}
@@ -14,7 +14,7 @@
             </div>
             {% endif %}
             <br>
-            {{ form.submit }}
+            <center>{{ form.submit }}</center>
         </form>
     </div>
     {% endblock chef %}

@@ -4,7 +4,7 @@
 
 <form action="" method="post">
     {{ form.hidden_tag() }}
-    {{ form.name.label }} {{ form.name }}
+    <center>{{ form.name.label }} {{ form.name }}</center> 
     {% if form.name.errors %}
     <div class='error'>
         {% for error in form.name.errors %}
@@ -13,7 +13,7 @@
     </div>
     {% endif %}
     <br>
-    {{ form.submit }}
+    <center><input class="btn btn-primary" type="submit" value="Submit"></center>
 </form>
 
 {% endblock chef %}

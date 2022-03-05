@@ -3,37 +3,38 @@
 
 <h1></h1>
 <br>
-<h3>Pizza chef's:</h3>
+<center><h4>Pizza chef's:</h4></center>
     <p>
     {% for chef in chef %}
-        name: {{ chef.name }} <br>
+    <center>Master Name: {{ chef.name }} <br></center>
         <br>
-        <span><a href="{{ url_for('updatechef', name=chef.name) }}">Update</a></span>
-        <span><a href="{{ url_for('deletechef', name=chef.name) }}">Delete</a></span> 
+        <center><span><a href="{{ url_for('updatechef', name=chef.name) }}">Update</a></span>
+        <span><a href="{{ url_for('deletechef', name=chef.name) }}">Delete</a></span></center>
         <br>
         <br>
     {% endfor %}
+    <center><h4>Custom Made Pizza's:</h4></center>
     {% for pizza in pizza %}
     <br>
-        Chef: {{ pizza.chef.name }}
+        <center>Chef: {{ pizza.chef.name }} </center> 
         <br>
-        Pizza name: {{ pizza.name }}
+        <center> Pizza name: {{ pizza.name }} </center>
         <br>
-        Crust: {{ pizza.crust }}
+        <center> Crust: {{ pizza.crust }} </center>
         <br>
-        base: {{ pizza.base }}
+        <center>base: {{ pizza.base }}
         <br>
-        topping1: {{ pizza.topping1 }}
+        <center> topping1: {{ pizza.topping1 }} </center>
         <br>
-        topping2: {{ pizza.topping2 }}
+        <center> topping2: {{ pizza.topping2 }} </center>
         <br>
-        topping3: {{ pizza.topping3 }}
+        <center> topping3: {{ pizza.topping3 }} </center>
         <br>
-        topping4: {{ pizza.topping4 }}
+        <center> topping4: {{ pizza.topping4 }} </center>
         <br>
-        topping5: {{ pizza.topping5 }}
+        <center> topping5: {{ pizza.topping5 }} </center>
         <br>
-        <button><span><a href="{{ url_for('deletepizza', name=pizza.name) }}">Delete Pizza</a></span></button>
+        <center><button><span><a href="{{ url_for('deletepizza', name=pizza.name) }}">Delete Pizza</a></span></button>
         <br>
         {% endfor %}  
         </p>

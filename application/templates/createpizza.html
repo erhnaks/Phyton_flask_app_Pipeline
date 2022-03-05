@@ -3,10 +3,9 @@
 
 <form action="" method="post">
     {{ form.hidden_tag() }}
-    {{ form.chef_id.label}} {{ form.chef_id }}
+    <center>{{ form.chef_id.label}} {{ form.chef_id }}</center>
     <br>
-    {{ form.name.label }} 
-    {{ form.name }}
+    <center>{{ form.name.label }} {{ form.name }}</center>
     {% if form.name.errors %}
     <div class='error'>
         {% for error in form.name.errors %}
@@ -15,22 +14,23 @@
     </div>
     {% endif %}
     <br>
-    {{ form.crust.label }} {{ form.crust }}
+    <center>{{ form.crust.label }} {{ form.crust }}</center>
     <br>
-    {{ form.base.label }} {{ form.base }}
+    <center>{{ form.base.label }} {{ form.base }}</center>
     <br>
-    {{ form.topping1.label }} {{ form.topping1 }}
+    <center>{{ form.topping1.label }} {{ form.topping1 }}</center>
     <br>
-    {{ form.topping2.label }} {{ form.topping2 }}
+    <center>{{ form.topping2.label }} {{ form.topping2 }}</center>
     <br>
-    {{ form.topping3.label }} {{ form.topping3 }}
+    <center>{{ form.topping3.label }} {{ form.topping3 }}</center>
     <br>
-    {{ form.topping4.label }} {{ form.topping4 }}
+    <center>{{ form.topping4.label }} {{ form.topping4 }}</center>
     <br>
-    {{ form.topping5.label }} {{ form.topping5 }}
-    <br>
+    <center>{{ form.topping5.label }} {{ form.topping5 }}</center>
     </div>
     <br>
-    {{ form.submit }}
+    <center><input class="btn btn-primary" type="submit" value="Submit"></center>
     </form>
     {% endblock chef %}
+
+    <center>  
