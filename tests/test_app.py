@@ -82,7 +82,7 @@ class TestCRUDChef(TestBase):
         follow_redirects=True
     )
         self.assertEqual(response.status_code, 200)
-        self.assertNotIn(b'updated', response.data)
+        self.assertNotIn(b'erhan', response.data)
 
 # Testing the CRUD fucntionality on Pizza Model
 
@@ -115,3 +115,8 @@ class TestCRUDPizza(TestBase):
         self.assertIn(b'Onion',response.data)
         self.assertIn(b'Pineapple',response.data)
         self.assertIn(b'Capsicum',response.data)
+    
+    def test_delete_pizza(self):
+        response = self.client.post(url_for('deletepizza', name="pizza"), follow_redirects=True)
+        response = self.client.get(url_for('read'))
+        self.assertEqual(response.status_code, 200)
