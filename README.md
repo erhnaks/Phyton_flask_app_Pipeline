@@ -67,9 +67,12 @@ User can **delete** their chef or pizza details;
 ## The Future Improvements
 
 There are multiple improvements I would like to implement in the future and they are;
-* Allow Users
-* allow me
-
+* Allow users to register with the app and write comments or add their own desired toppings.
+* Allow users to contact eachother to created mastered joint pizza's.
+* Allow chef's to sell their Pizza's to users.
+* Users can customize their profile page and add other chef's or users as a friends, change their profile page colour palette of the website, upload their final photo of their custom pizza's, and send or receive private messages.
+* Allowing users to add other ingredients.
+* Add a search bar for easier and quicker nagivation.
 
 ## The App Creator
 **Erhan Aksu**
