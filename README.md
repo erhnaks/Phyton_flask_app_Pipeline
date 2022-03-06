@@ -6,6 +6,7 @@
 * [The Project Tracking](#The-Project-Tracking)
 * [The Testing](#The-Testing)
 * [The Pizza App](#The-Pizza-App)
+* [The App Creator](#The-App-Creator)
 
 
 ## Pizza App ERD:
@@ -61,6 +62,9 @@ Users can **update** their chef name or delete their name and any of their creat
 User can **delete** their chef or pizza details;
 
 ![Deleted a pizza and the app kept the updated chef](https://user-images.githubusercontent.com/97620234/156921378-220afc23-c177-4a49-9af5-e30c38cbe6d0.png)
+
+## The App Creator
+**Erhan Aksu**
 
 
 
