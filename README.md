@@ -4,7 +4,7 @@
 ## Contents:
 * [Pizza App ERD](#The-Pizza-ERD)
 * [The Project Tracking](#The-Project-Tracking)
-* [The Risk Assesment](*The-Risk-Assesment)
+* [The Risk Assesment](#The-Risk-Assesment)
 * [The Testing](#The-Testing)
 * [The Pizza App](#The-Pizza-App)
 * [The Future Improvements](#The-Future-Improvements)
