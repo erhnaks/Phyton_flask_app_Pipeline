@@ -4,6 +4,7 @@
 ## Contents:
 * [Pizza App ERD](#The-Pizza-ERD)
 * [The Project Tracking](#The-Project-Tracking)
+* [The Risk Assesment](*The-Risk-Assesment)
 * [The Testing](#The-Testing)
 * [The Pizza App](#The-Pizza-App)
 * [The Future Improvements](#The-Future-Improvements)
@@ -16,6 +17,11 @@
 The Jira board was used to track the application. The link to project tracking board can be found here https://erhnaks.atlassian.net/jira/software/projects/QP/boards/4
 
 ![Jira Board](https://user-images.githubusercontent.com/97620234/156923917-ef72d51e-21e0-451b-ae6e-a80f4bfbb20f.png)
+
+## The Risk Assesment
+Here you can see my detailed project risk assesment outlining the low and high risk that potential risk to succes of this application.
+
+![Project-Risk-Assesment](https://user-images.githubusercontent.com/97620234/156927134-5062bb91-d0a5-4bfd-a06b-f18e47a6e2c3.png)
 
 ## The Testing
 Unit tests were writtent to test CRUD functionality to ensure that these fucntions worked as intented.
