@@ -6,6 +6,7 @@
 * [The Project Tracking](#The-Project-Tracking)
 * [The Testing](#The-Testing)
 * [The Pizza App](#The-Pizza-App)
+* [The Future Improvements](#The-Future-Improvements)
 * [The App Creator](#The-App-Creator)
 
 
@@ -62,6 +63,13 @@ Users can **update** their chef name or delete their name and any of their creat
 User can **delete** their chef or pizza details;
 
 ![Deleted a pizza and the app kept the updated chef](https://user-images.githubusercontent.com/97620234/156921378-220afc23-c177-4a49-9af5-e30c38cbe6d0.png)
+
+## The Future Improvements
+
+There are multiple improvements I would like to implement in the future and they are;
+* Allow Users
+* allow me
+
 
 ## The App Creator
 **Erhan Aksu**
