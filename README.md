@@ -3,10 +3,27 @@
  
 ## Contents:
 * [Pizza App ERD](#The-Pizza-ERD)
+* [The Testing](#The-Testing)
 * [The Pizza App](#The-Pizza-App)
+
 
 ## Pizza App ERD:
 ![pizza app diagram](https://user-images.githubusercontent.com/97620234/156920546-628642e1-224c-434b-888c-2dd35b31b57c.png)
+
+## The Testing
+Unit tests were writtent to test CRUD functionality to ensure that these fucntions worked as intented.
+
+The coverage reports showing test achieved 88% report coverage.
+
+**Coverage Report %88** 
+HTML Report
+
+![test_coverage_report](https://user-images.githubusercontent.com/97620234/156923008-3595b4d3-afc2-45c3-8c41-3111c0fb92a7.png)
+
+Pytest Coverage Report;
+
+![test_report](https://user-images.githubusercontent.com/97620234/156922992-8a9f9076-6420-426e-9679-306896e389d0.png)
+
 
 ## The Pizza App:
 
