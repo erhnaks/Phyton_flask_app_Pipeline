@@ -3,12 +3,19 @@
  
 ## Contents:
 * [Pizza App ERD](#The-Pizza-ERD)
+* [The Project Tracking](#The-Project-Tracking)
 * [The Testing](#The-Testing)
 * [The Pizza App](#The-Pizza-App)
 
 
 ## Pizza App ERD:
 ![pizza app diagram](https://user-images.githubusercontent.com/97620234/156920546-628642e1-224c-434b-888c-2dd35b31b57c.png)
+
+## The Project Tracking
+The Jira board was used to track the application. The link to project tracking board can be found here https://erhnaks.atlassian.net/jira/software/projects/QP/boards/4
+
+![Jira Board](https://user-images.githubusercontent.com/97620234/156923917-ef72d51e-21e0-451b-ae6e-a80f4bfbb20f.png)
+
 
 ## The Testing
 Unit tests were writtent to test CRUD functionality to ensure that these fucntions worked as intented.
