@@ -9,7 +9,6 @@
 * [The Future Improvements](#The-Future-Improvements)
 * [The App Creator](#The-App-Creator)
 
-
 ## Pizza App ERD:
 ![pizza app diagram](https://user-images.githubusercontent.com/97620234/156920546-628642e1-224c-434b-888c-2dd35b31b57c.png)
 
@@ -17,7 +16,6 @@
 The Jira board was used to track the application. The link to project tracking board can be found here https://erhnaks.atlassian.net/jira/software/projects/QP/boards/4
 
 ![Jira Board](https://user-images.githubusercontent.com/97620234/156923917-ef72d51e-21e0-451b-ae6e-a80f4bfbb20f.png)
-
 
 ## The Testing
 Unit tests were writtent to test CRUD functionality to ensure that these fucntions worked as intented.
@@ -33,9 +31,7 @@ Pytest Coverage Report;
 
 ![test_report](https://user-images.githubusercontent.com/97620234/156922992-8a9f9076-6420-426e-9679-306896e389d0.png)
 
-
 ## The Pizza App:
-
 When app launch the user is shown the homepage:
 
 ![Pizza app homepage](https://user-images.githubusercontent.com/97620234/156920895-294f1f69-33ce-437c-bb26-624cbfd0ca70.png)
@@ -65,7 +61,6 @@ User can **delete** their chef or pizza details;
 ![Deleted a pizza and the app kept the updated chef](https://user-images.githubusercontent.com/97620234/156921378-220afc23-c177-4a49-9af5-e30c38cbe6d0.png)
 
 ## The Future Improvements
-
 There are multiple improvements I would like to implement in the future and they are;
 * Allow users to register with the app and write comments or add their own desired toppings.
 * Allow users to contact eachother to created mastered joint pizza's.
@@ -76,7 +71,3 @@ There are multiple improvements I would like to implement in the future and they
 
 ## The App Creator
 **Erhan Aksu**
-
-
-
-
