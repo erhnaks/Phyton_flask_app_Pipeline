@@ -35,7 +35,7 @@ HTML Report
 
 Pytest Coverage Report;
 
-![test_report](https://user-images.githubusercontent.com/97620234/156922992-8a9f9076-6420-426e-9679-306896e389d0.png)
+![terminal pytest report](https://user-images.githubusercontent.com/97620234/157000047-1038ed6b-61bf-4fc1-8bf1-e80edb56327b.png)
 
 ## The Pizza App:
 When app launch the user is shown the homepage:
