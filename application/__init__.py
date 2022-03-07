@@ -4,11 +4,9 @@ import os
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///chefdb'
-# os.getenv("DATABASE_URI")
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URI")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SECRET_KEY'] = ("123456789")
-# os.getenv
+app.config['SECRET_KEY'] = os.getenv('KEY')
 
 db = SQLAlchemy(app)
 from application import routes

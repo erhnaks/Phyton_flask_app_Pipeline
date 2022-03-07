@@ -1,17 +1,17 @@
 FROM python:3.8
 
-WORKDIR /app
+WORKDIR /pizza
 
-ENV DATABASE_URI=msqlite:///chefdb
+ENV DATABASE_URI=mysql+pymysql://root:pizza123@mysql_container:3306/chefdb
 
-ENV MY_KEY=123456789
+ENV KEY=123456789
 
-COPY . .
+COPY application /pizza/application
 
-COPY app.py create.py requirements.txt /app/
+COPY app.py create.py requirements.txt /pizza/
 
 RUN pip install -r requirements.txt 
 
-RUN python3 create.py
+# RUN python3 create.py
 
 ENTRYPOINT ["python3", "app.py"]
