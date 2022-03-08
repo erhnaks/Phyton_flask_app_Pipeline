@@ -1,0 +1,75 @@
+version: "3.8"
+
+services:
+
+  pizzaapp:
+
+    container_name: pizzaapp
+
+    build: ./
+
+    ports:
+
+    - target: 5000
+
+      published: 5000
+
+      protocol: tcp
+
+
+
+  database:
+
+    image: mysql:5.7
+
+    container_name: sql_container
+
+    ports:
+
+    - target: 3306
+
+      published: 3306
+
+    environment:
+
+      MYSQL_ROOT_PASSWORD: root
+
+      MYSQL_DATABASE: chefdb
+
+    volumes:
+
+    - type: pizza
+
+      source: mysql
+
+      target: /var/lib/mysql
+
+
+
+  nginx:
+
+    image: nginx:latest
+
+    container_name: nginx_container
+
+    ports:
+
+    - target: 80
+
+      published: 80
+
+      protocol: tcp
+
+    volumes:
+
+    - type: bind
+
+      source: nginx/nginx.conf
+
+      target: /etc/nginx/nginx.conf
+
+
+
+volumes:
+
+  mysql:

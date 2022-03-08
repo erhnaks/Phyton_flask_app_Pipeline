@@ -10,8 +10,8 @@ COPY application /pizza/application
 
 COPY app.py create.py requirements.txt /pizza/
 
-RUN pip install -r requirements.txt 
+RUN pip install -r requirements.txt
 
-# RUN python3 create.py
+COPY . /pizza/
 
 ENTRYPOINT ["python3", "app.py"]
