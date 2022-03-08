@@ -63,10 +63,6 @@ class TestCRUDChef(TestBase):
         self.assertIn(b'erhan', response.data)
 
     # Testing Update Function with GET request.
-
-    def test_update_chef(self):
-        response = self.client.get(url_for("updatechef", name="erhan"))
-        self.assertEqual(response.status_code, 200)
     
     def test_update_chef(self):
         response = self.client.post(url_for("updatechef", name="erhan"),
@@ -75,7 +71,6 @@ class TestCRUDChef(TestBase):
     )
         self.assertEqual(response.status_code, 200)
         self.assertIn(b'updated', response.data)
-
 
     def test_delete_chef(self):
         response = self.client.post(url_for("deletechef", name="erhan"),
@@ -102,7 +97,7 @@ class TestCRUDPizza(TestBase):
         self.assertIn(b'Capsicum',response.data)
     
     def test_create_pizza(self):
-        response = self.client.post(url_for('createpizza'))
+        response = self.client.post(url_for('createpizza'), follow_redirects=True)
         self.assertEqual(response.status_code, 200)
         response = self.client.get(url_for('read'))
         self.assertEqual(response.status_code, 200)
