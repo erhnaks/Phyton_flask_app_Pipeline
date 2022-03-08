@@ -1,17 +1,15 @@
 version: "3.8"
 
 services:
-  pizza:
-    container_name: pizzaapp
-    build: ./
+  pizzaapp:
+    image: pizza_pizza:latest
     ports:
     - target: 5000
       published: 5000
       protocol: tcp
 
-  database:
+  mysql_container:
     image: mysql:5.7
-    container_name: mysql_container
     ports:
     - target: 3306
       published: 3306
@@ -25,7 +23,6 @@ services:
 
   nginx:
     image: nginx:latest
-    container_name: nginx_container
     ports:
     - target: 80
       published: 80
