@@ -20,5 +20,6 @@ sudo curl -L "https://github.com/docker/compose/releases/download/${version}/doc
 sudo chmod +x /usr/local/bin/docker-compose
 
 # Docker login to push to dockerhub
+sudo usermod -aG docker ${USER}
 
 docker login -u $DOCKER_HUB_CREDS_USR -p $DOCKER_HUB_CREDS_PSW
