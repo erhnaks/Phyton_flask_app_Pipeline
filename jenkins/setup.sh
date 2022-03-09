@@ -10,6 +10,7 @@ sudo apt-get install -y curl jq
 # install Docker
 
 curl https://get.docker.com | sudo bash
+sudo usermod -a -G docker jenkins
 
 # Install Docker compose
 
@@ -21,6 +22,6 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 # Docker login to push to dockerhub
 
-sudo usermod -a -G docker jenkins
+
 
 docker login --username $DOCKER_HUB_CREDS_USR --password $DOCKER_HUB_CREDS_PSW
