@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   pizzaapp:
-    image: pizza_pizza:latest
+    image: ${DOCKER_HUB_CREDS_USR}/pizza_pizza:latest
     ports:
     - target: 5000
       published: 5000
