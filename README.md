@@ -4,6 +4,7 @@
 ## Contents:
 * [Pizza App ERD](#The-Pizza-ERD)
 * [The Project Tracking](#The-Project-Tracking)
+* [The Burndown Chart](#The-Burndown-Chart)
 * [The Risk Assesment](#The-Risk-Assesment)
 * [The Testing](#The-Testing)
 * [The Pizza App](#The-Pizza-App)
@@ -17,6 +18,11 @@
 The Jira board was used to track the application. The link to project tracking board can be found here https://erhnaks.atlassian.net/jira/software/projects/QP/boards/4
 
 ![Jira Board](https://user-images.githubusercontent.com/97620234/156923917-ef72d51e-21e0-451b-ae6e-a80f4bfbb20f.png)
+
+## The Burndown Chart
+Here you can see the burndown report for the project
+
+![burndown chart](https://user-images.githubusercontent.com/97620234/157499164-4c9ffbce-78af-41a4-88bd-5cf3ffb2bd5e.png)
 
 ## The Risk Assesment
 Here you can see my detailed project risk assesment outlining the low and high risk that potential risk to succes of this application.
