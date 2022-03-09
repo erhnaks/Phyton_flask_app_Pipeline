@@ -11,6 +11,7 @@ sudo apt-get install -y curl jq
 
 curl https://get.docker.com | sudo bash
 sudo usermod -a -G docker jenkins
+newgrp docker
 
 # Install Docker compose
 
