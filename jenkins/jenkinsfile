@@ -1,6 +1,5 @@
 pipeline {
     agent any
-    }
     stages {
         stage('Setup') {
             steps {
@@ -17,6 +16,7 @@ pipeline {
                 sh "bash jenkins/build.sh"
             }
         }
+        
         stage('Push') {
             steps {
                 sh "bash jenkins/push.sh"
@@ -28,3 +28,4 @@ pipeline {
             }
         }
     }
+}
