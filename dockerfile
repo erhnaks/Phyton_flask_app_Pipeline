@@ -2,9 +2,9 @@ FROM python:3.8
 
 WORKDIR /pizza
 
-ENV DATABASE_URI=mysql+pymysql://root:pizza123@mysql_container:3306/chefdb
+ENV DATABASE_URI=${MY_DATABASE}
 
-ENV KEY=123456789
+ENV KEY=${MY_SECRET_KEY}
 
 COPY application /pizza/application
 
