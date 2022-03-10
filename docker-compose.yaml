@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   pizzaapp:
-    image: pizza_pizza:latest
+    image: erhnaks/pizzaapp:latest
     environment:
       DATABASE_URI: ${MY_DATABASE}
       KEY: ${MY_SECRET_KEY}
