@@ -61,12 +61,6 @@ class TestCRUDChef(TestBase):
         self.assertEqual(response.status_code, 200)
         self.assertIn(b'erhan', response.data)
 
-    # Testing Update Function with GET request.
-
-    def test_update_chef(self):
-        response = self.client.get(url_for("updatechef", name="erhan"))
-        self.assertEqual(response.status_code, 200)
-    
     def test_update_chef(self):
         response = self.client.post(url_for("updatechef", name="erhan"),
         data=dict(name="updated"),
