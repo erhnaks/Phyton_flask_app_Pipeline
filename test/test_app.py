@@ -4,8 +4,7 @@ from application.models import Chef, Pizza
 from flask import url_for
 
 class TestBase(TestCase):
-    def create_app(self):
-        
+    def create_app(self):        
         app.config.update(
                 SQLALCHEMY_DATABASE_URI="sqlite:///",
                 SECRET_KEY='TEST_SECRET_KEY',
@@ -16,7 +15,6 @@ class TestBase(TestCase):
 
     def setUp(self):
         db.create_all()
-
         chef1 = Chef(name="erhan")
         db.session.add(chef1)
         db.session.commit()
@@ -45,6 +43,19 @@ class Testresponse(TestBase):
         self.assertIn(b'Pineapple',response.data)
         self.assertIn(b'Capsicum',response.data)
 
+
+    def test_chefform_get(self):
+        response = self.client.get(url_for('createchef'))
+        self.assertEqual(response.status_code, 200)
+    
+    def test_pizzaform_get(self):
+        response = self.client.get(url_for('createpizza'))
+        self.assertEqual(response.status_code, 200)
+    
+    def test_update_get(self):
+        response = self.client.get(url_for('updatechef', name=("erhan")))
+        self.assertEqual(response.status_code, 200)
+
 # Testing the CRUD Functionality on Chef Model
 
 class TestCRUDChef(TestBase):
@@ -56,10 +67,9 @@ class TestCRUDChef(TestBase):
     
     def test_create_chef(self):
         response = self.client.post(url_for('createchef'),
-        data=dict(name="erhan"),
-        follow_redirects=True)
+        data=dict(name="Harry"), follow_redirects=True)
         self.assertEqual(response.status_code, 200)
-        self.assertIn(b'erhan', response.data)
+        self.assertIn(b'Harry', response.data)
 
     def test_update_chef(self):
         response = self.client.post(url_for("updatechef", name="erhan"),
@@ -95,19 +105,32 @@ class TestCRUDPizza(TestBase):
         self.assertIn(b'Capsicum',response.data)
     
     def test_create_pizza(self):
-        response = self.client.post(url_for('createpizza'))
+        response = self.client.post(url_for('createpizza'), data=dict(
+
+    name = "Testpizza",
+    
+    crust = "Thin",
+    
+    base =  "Tomato",
+    
+    topping1 = "Chicken",
+    
+    topping2 = "Pepper hot",
+    
+    topping3 = "Olives",
+    
+    topping4 = "Sweetcorn",
+    
+    topping5 = "Garlic",
+    
+    chef_id = 1
+
+        ), follow_redirects=True)
+        print(response.data)
+
         self.assertEqual(response.status_code, 200)
-        response = self.client.get(url_for('read'))
-        self.assertEqual(response.status_code, 200)
-        self.assertIn(b'erhan',response.data)
-        self.assertIn(b'pizza',response.data)
-        self.assertIn(b'Deep',response.data)
-        self.assertIn(b'Capsicum',response.data)
-        self.assertIn(b'Beef',response.data)
-        self.assertIn(b'Pepper mild',response.data)
-        self.assertIn(b'Onion',response.data)
-        self.assertIn(b'Pineapple',response.data)
-        self.assertIn(b'Capsicum',response.data)
+        self.assertIn(b'Testpizza',response.data)
+
     
     def test_delete_pizza(self):
         response = self.client.post(url_for('deletepizza', name="pizza"), follow_redirects=True)

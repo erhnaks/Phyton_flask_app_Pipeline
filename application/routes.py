@@ -58,8 +58,7 @@ def createpizza():
         pizzaform.chef_id.choices.append((chef.id, chef.name))
 
     if pizzaform.validate_on_submit():
-        pizza = Pizza(
-        name=pizzaform.name.data,
+        pizza = Pizza(name=pizzaform.name.data,
         crust=pizzaform.crust.data,
         base=pizzaform.base.data,
         topping1=pizzaform.topping1.data,
