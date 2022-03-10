@@ -32,16 +32,16 @@ Here you can see my detailed project risk assesment outlining the low and high r
 ## The Testing
 Unit tests were writtent to test CRUD functionality to ensure that these fucntions worked as intented.
 
-The coverage reports showing test achieved 88% report coverage.
+The coverage reports showing test achieved 97% report coverage.
 
 **Coverage Report %88** 
 HTML Report
 
-![test_coverage_report](https://user-images.githubusercontent.com/97620234/156923008-3595b4d3-afc2-45c3-8c41-3111c0fb92a7.png)
+![coverage html report](https://user-images.githubusercontent.com/97620234/157726690-10552551-c75d-410a-adb6-91641e45c9a3.png)
 
 Pytest Coverage Report;
 
-![terminal pytest report](https://user-images.githubusercontent.com/97620234/157000047-1038ed6b-61bf-4fc1-8bf1-e80edb56327b.png)
+![terminal pytest report](https://user-images.githubusercontent.com/97620234/157726487-9b5706e7-7c8b-44b5-a5c4-c9ef13641528.png)
 
 ## The Pizza App:
 When app launch the user is shown the homepage:
