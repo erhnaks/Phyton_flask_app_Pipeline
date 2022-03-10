@@ -2,7 +2,10 @@ version: "3.8"
 
 services:
   pizzaapp:
-    image: pizza_pizza:latest
+    image: erhnaks/pizzaapp:latest
+    environment:
+      DATABASE_URI: ${MY_DATABASE}
+      KEY: ${MY_SECRET_KEY}
     ports:
     - target: 5000
       published: 5000
@@ -14,8 +17,8 @@ services:
     - target: 3306
       published: 3306
     environment:
-      MYSQL_ROOT_PASSWORD: pizza123
-      MYSQL_DATABASE: chefdb
+      MYSQL_ROOT_PASSWORD: ${DATABASE_PASSWORD}
+      MYSQL_DATABASE: ${DATABASE_NAME}
     volumes:
     - type: volume
       source: pizza
