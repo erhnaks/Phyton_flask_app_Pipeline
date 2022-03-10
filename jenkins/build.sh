@@ -6,4 +6,4 @@ echo "Build Stage"
 
 #build Docker images
 
-docker-compose build
+docker stack deploy --compose-file docker-compose.yaml pizzaapp
