@@ -3,7 +3,7 @@
  
 ## Contents:
 * [Pizza App ERD](#The-Pizza-ERD)
-* [Project Version Control](#Project-Version-Control)
+* [Project CI/CD](#Project-CI/CD)
 * [The Project Tracking](#The-Project-Tracking)
 * [The Burndown Chart](#The-Burndown-Chart)
 * [The Risk Assesment](#The-Risk-Assesment)
@@ -15,10 +15,10 @@
 ## Pizza App ERD:
 ![pizza app diagram](https://user-images.githubusercontent.com/97620234/156920546-628642e1-224c-434b-888c-2dd35b31b57c.png)
 
-## Project Version Control 
+## Project CI/CD 
 The Jira Board used to create the user story and Python program used to write the code. The code's were stored at Github Account for version control and Jenkins used to automate the CI/CD Pipeline. 
 
-![projCI](https://user-images.githubusercontent.com/97620234/157736460-24ebf945-1d58-49da-8e24-61d56a1e6332.png)
+![app-tracking](https://user-images.githubusercontent.com/97620234/157842191-1ab4e602-b249-4798-bf48-a08ba46b2f5b.png)
 
 ## The Project Tracking
 The Jira board was used to track the application. The link to project tracking board can be found here https://erhnaks.atlassian.net/jira/software/projects/QP/boards/4
